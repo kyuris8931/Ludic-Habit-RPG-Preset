@@ -1,0 +1,315 @@
+{
+  "skills": [
+    {
+      "id": "skill_melee_attack",
+      "key": "melee_attack",
+      "name": "Melee Strike",
+      "description": "Physical close-range strike targeting an exact distance of 1 tile.",
+      "type": "NORMAL_ATTACK",
+      "spCost": 0,
+      "author": "kyuris",
+      "authorNotes": "Standard 1-tile melee strike for front-line units.",
+      "createdAt": "2026-10-01",
+      "tags": ["melee", "basic", "attack"],
+      "version": "1.0.0",
+      "skillLogic": {
+        "targeting": {
+          "selection": {
+            "rangeType": "RANGED",
+            "rangeValue": 1,
+            "scope": "EXACT",
+            "validTarget": "ENEMY",
+            "targetState": "ALIVE",
+            "direction": "ALL"
+          },
+          "impact": {
+            "shape": "SINGLE",
+            "size": 0
+          }
+        },
+        "pipeline": [
+          {
+            "#class": "Instant",
+            "type": "DAMAGE",
+            "multiplier": 1.0,
+            "params": {},
+            "subject": {
+              "#class": "PrimaryTarget"
+            },
+            "filter": "ALL",
+            "conditions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "skill_ranged_attack",
+      "key": "ranged_attack",
+      "name": "Ranged Shot",
+      "description": "Medium-range projectile targeting an exact distance of 2 tiles.",
+      "type": "NORMAL_ATTACK",
+      "spCost": 0,
+      "author": "kyuris",
+      "authorNotes": "Standard 2-tile ranged attack for mid-line units.",
+      "createdAt": "2026-10-01",
+      "tags": ["ranged", "basic", "attack"],
+      "version": "1.0.0",
+      "skillLogic": {
+        "targeting": {
+          "selection": {
+            "rangeType": "RANGED",
+            "rangeValue": 2,
+            "scope": "EXACT",
+            "validTarget": "ENEMY",
+            "targetState": "ALIVE",
+            "direction": "ALL"
+          },
+          "impact": {
+            "shape": "SINGLE",
+            "size": 0
+          }
+        },
+        "pipeline": [
+          {
+            "#class": "Instant",
+            "type": "DAMAGE",
+            "multiplier": 1.0,
+            "params": {},
+            "subject": {
+              "#class": "PrimaryTarget"
+            },
+            "filter": "ALL",
+            "conditions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "skill_sniper_attack",
+      "key": "sniper_attack",
+      "name": "Sniper Shot",
+      "description": "Long-range precision shot targeting an exact distance of 3 tiles.",
+      "type": "NORMAL_ATTACK",
+      "spCost": 0,
+      "author": "kyuris",
+      "authorNotes": "Standard 3-tile sniper attack for back-line marksmen.",
+      "createdAt": "2026-10-01",
+      "tags": ["sniper", "basic", "attack"],
+      "version": "1.0.0",
+      "skillLogic": {
+        "targeting": {
+          "selection": {
+            "rangeType": "RANGED",
+            "rangeValue": 3,
+            "scope": "EXACT",
+            "validTarget": "ENEMY",
+            "targetState": "ALIVE",
+            "direction": "ALL"
+          },
+          "impact": {
+            "shape": "SINGLE",
+            "size": 0
+          }
+        },
+        "pipeline": [
+          {
+            "#class": "Instant",
+            "type": "DAMAGE",
+            "multiplier": 1.0,
+            "params": {},
+            "subject": {
+              "#class": "PrimaryTarget"
+            },
+            "filter": "ALL",
+            "conditions": []
+          }
+        ]
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "enemy_ghosty",
+      "key": "ghosty",
+      "name": "Ghosty",
+      "role": "ELITE",
+      "maxGauge": 100,
+      "normalAttackId": "skill_ranged_attack",
+      "author": "kyuris",
+      "authorNotes": "A floating specter that attacks from a medium distance of 2 tiles using plasma bolts.",
+      "createdAt": "2026-10-01",
+      "tags": ["elite", "ghost", "ranged"],
+      "version": "1.0.0",
+      "imageUrls": {
+        "portrait": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/enemy/ghosty_potrait.png",
+        "idle": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/enemy/ghosty.png"
+      },
+      "skills": [
+        {
+          "id": "skill_ranged_attack",
+          "key": "ranged_attack",
+          "name": "Ranged Shot",
+          "description": "Medium-range projectile targeting an exact distance of 2 tiles.",
+          "type": "NORMAL_ATTACK",
+          "spCost": 0,
+          "author": "kyuris",
+          "authorNotes": "Standard 2-tile ranged attack for mid-line units.",
+          "createdAt": "2026-10-01",
+          "tags": ["ranged", "basic", "attack"],
+          "version": "1.0.0",
+          "skillLogic": {
+            "targeting": {
+              "selection": {
+                "rangeType": "RANGED",
+                "rangeValue": 2,
+                "scope": "EXACT",
+                "validTarget": "ENEMY",
+                "targetState": "ALIVE",
+                "direction": "ALL"
+              },
+              "impact": {
+                "shape": "SINGLE",
+                "size": 0
+              }
+            },
+            "pipeline": [
+              {
+                "#class": "Instant",
+                "type": "DAMAGE",
+                "multiplier": 1.0,
+                "params": {},
+                "subject": {
+                  "#class": "PrimaryTarget"
+                },
+                "filter": "ALL",
+                "conditions": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "enemy_slimy",
+      "key": "slimy",
+      "name": "Slimy",
+      "role": "BOSS",
+      "maxGauge": 100,
+      "normalAttackId": "skill_melee_attack",
+      "author": "kyuris",
+      "authorNotes": "A colossal gelatinous boss that engages enemies in close 1-tile melee range.",
+      "createdAt": "2026-10-01",
+      "tags": ["boss", "slime", "melee"],
+      "version": "1.0.0",
+      "imageUrls": {
+        "portrait": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/enemy/slimy_potrait.png",
+        "idle": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/enemy/slimy.png"
+      },
+      "skills": [
+        {
+          "id": "skill_melee_attack",
+          "key": "melee_attack",
+          "name": "Melee Strike",
+          "description": "Physical close-range strike targeting an exact distance of 1 tile.",
+          "type": "NORMAL_ATTACK",
+          "spCost": 0,
+          "author": "kyuris",
+          "authorNotes": "Standard 1-tile melee strike for front-line units.",
+          "createdAt": "2026-10-01",
+          "tags": ["melee", "basic", "attack"],
+          "version": "1.0.0",
+          "skillLogic": {
+            "targeting": {
+              "selection": {
+                "rangeType": "RANGED",
+                "rangeValue": 1,
+                "scope": "EXACT",
+                "validTarget": "ENEMY",
+                "targetState": "ALIVE",
+                "direction": "ALL"
+              },
+              "impact": {
+                "shape": "SINGLE",
+                "size": 0
+              }
+            },
+            "pipeline": [
+              {
+                "#class": "Instant",
+                "type": "DAMAGE",
+                "multiplier": 1.0,
+                "params": {},
+                "subject": {
+                  "#class": "PrimaryTarget"
+                },
+                "filter": "ALL",
+                "conditions": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "enemy_batty",
+      "key": "batty",
+      "name": "Batty",
+      "role": "MINION",
+      "maxGauge": 100,
+      "normalAttackId": "skill_sniper_attack",
+      "author": "kyuris",
+      "authorNotes": "A fast-winged minion that snipes targets from a long distance of 3 tiles.",
+      "createdAt": "2026-10-01",
+      "tags": ["minion", "bat", "sniper"],
+      "version": "1.0.0",
+      "imageUrls": {
+        "portrait": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/enemy/batty_potrait.png",
+        "idle": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/enemy/batty.png"
+      },
+      "skills": [
+        {
+          "id": "skill_sniper_attack",
+          "key": "sniper_attack",
+          "name": "Sniper Shot",
+          "description": "Long-range precision shot targeting an exact distance of 3 tiles.",
+          "type": "NORMAL_ATTACK",
+          "spCost": 0,
+          "author": "kyuris",
+          "authorNotes": "Standard 3-tile sniper attack for back-line marksmen.",
+          "createdAt": "2026-10-01",
+          "tags": ["sniper", "basic", "attack"],
+          "version": "1.0.0",
+          "skillLogic": {
+            "targeting": {
+              "selection": {
+                "rangeType": "RANGED",
+                "rangeValue": 3,
+                "scope": "EXACT",
+                "validTarget": "ENEMY",
+                "targetState": "ALIVE",
+                "direction": "ALL"
+              },
+              "impact": {
+                "shape": "SINGLE",
+                "size": 0
+              }
+            },
+            "pipeline": [
+              {
+                "#class": "Instant",
+                "type": "DAMAGE",
+                "multiplier": 1.0,
+                "params": {},
+                "subject": {
+                  "#class": "PrimaryTarget"
+                },
+                "filter": "ALL",
+                "conditions": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
