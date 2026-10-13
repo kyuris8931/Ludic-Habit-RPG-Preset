@@ -346,6 +346,41 @@
           }
         ]
       }
+    },
+    {
+      "id": "mastery_push_up",
+      "key": "push_up",
+      "name": "Push Up",
+      "description": "Daily push up training to build upper body strength and mastery.",
+      "type": "MASTERY",
+      "targetValue": 0.0,
+      "targetPeriod": "NONE",
+      "unitName": "Reps",
+      "author": "kyuris",
+      "authorNotes": "Mastery habit for physical training bundled with Push Up Ticket.",
+      "createdAt": "2026-10-01",
+      "tags": ["mastery", "fitness", "pushup", "exercise"],
+      "version": "1.0.0",
+      "imageUrls": {
+        "icon": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/habit/dumbell.png"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "item_habit_push_up",
+      "name": "Push Up Ticket",
+      "description": "Ticket tool required for Push Up mastery training.",
+      "rarity": "COMMON",
+      "category": "MASTERY_TOOL",
+      "value": 25,
+      "author": "kyuris",
+      "createdAt": "2026-10-01",
+      "tags": ["ticket", "tool", "mastery"],
+      "version": "1.0.0",
+      "imageUrls": {
+        "icon": "https://raw.githubusercontent.com/kyuris8931/gamicraft-icons/main/push_up_ticket_icon.png"
+      }
     }
   ]
 }
