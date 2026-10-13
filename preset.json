@@ -316,7 +316,7 @@
     {
       "id": "habit_cleaning",
       "key": "cleaning",
-      "name": "Personal Space Cleaning",
+      "name": "Tidy Up",
       "description": "Tidy up and clean your personal workspace or small area every day.",
       "type": "BOOLEAN",
       "targetValue": 1.0,
