@@ -311,5 +311,41 @@
         }
       ]
     }
+  ],
+  "habits": [
+    {
+      "id": "habit_cleaning",
+      "key": "cleaning",
+      "name": "Personal Space Cleaning",
+      "description": "Tidy up and clean your personal workspace or small area every day.",
+      "type": "BOOLEAN",
+      "targetValue": 1.0,
+      "targetPeriod": "DAILY",
+      "unitName": "Times",
+      "author": "kyuris",
+      "authorNotes": "Daily habit to keep your personal workspace organized with a bonus deep clean subtask.",
+      "createdAt": "2026-10-01",
+      "tags": ["cleaning", "daily", "productivity", "workspace"],
+      "version": "1.0.0",
+      "imageUrls": {
+        "icon": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/habit/cleaning.png"
+      },
+      "rewardsPayload": [
+        { "type": "BASIC", "id": "diamond", "value": "10" },
+        { "type": "BASIC", "id": "exp", "value": "20" }
+      ],
+      "metadata": {
+        "subTasks": [
+          {
+            "id": "subtask_deep_clean",
+            "name": "Deep Clean",
+            "rewards": [
+              { "type": "BASIC", "id": "diamond", "value": "25" },
+              { "type": "BASIC", "id": "exp", "value": "50" }
+            ]
+          }
+        ]
+      }
+    }
   ]
 }
