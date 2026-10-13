@@ -348,6 +348,8 @@
       }
     },
     {
+  "habits": [
+    {
       "id": "mastery_push_up",
       "key": "push_up",
       "name": "Push Up",
@@ -357,30 +359,25 @@
       "targetPeriod": "NONE",
       "unitName": "Reps",
       "author": "kyuris",
-      "authorNotes": "Mastery habit for physical training bundled with Push Up Ticket.",
+      "authorNotes": "Mastery habit for physical training bundled with its linked training item.",
       "createdAt": "2026-10-01",
       "tags": ["mastery", "fitness", "pushup", "exercise"],
       "version": "1.0.0",
       "imageUrls": {
-        "icon": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/habit/dumbell.png"
+        "icon": "https://raw.githubusercontent.com/kyuris8931/gamicraft-icons/main/push_up_icon.png"
+      },
+      "linkedItem": {
+        "id": "item_habit_push_up",
+        "name": "Push Up Ticket",
+        "description": "Item tool required for Push Up mastery training.",
+        "category": "MASTERY_TOOL",
+        "value": 25,
+        "imageUrls": {
+          "icon": "https://raw.githubusercontent.com/kyuris8931/gamicraft-icons/main/push_up_ticket_icon.png"
+        }
       }
     }
-  ],
-  "items": [
-    {
-      "id": "item_habit_push_up",
-      "name": "Push Up Ticket",
-      "description": "Ticket tool required for Push Up mastery training.",
-      "rarity": "COMMON",
-      "category": "MASTERY_TOOL",
-      "value": 25,
-      "author": "kyuris",
-      "createdAt": "2026-10-01",
-      "tags": ["ticket", "tool", "mastery"],
-      "version": "1.0.0",
-      "imageUrls": {
-        "icon": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/items/ticket.png"
-      }
-    }
+  ]
+}
   ]
 }
