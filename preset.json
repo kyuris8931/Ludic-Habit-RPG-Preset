@@ -348,8 +348,6 @@
       }
     },
     {
-  "habits": [
-    {
       "id": "mastery_push_up",
       "key": "push_up",
       "name": "Push Up",
@@ -377,7 +375,5 @@
         }
       }
     }
-  ]
-}
   ]
 }
