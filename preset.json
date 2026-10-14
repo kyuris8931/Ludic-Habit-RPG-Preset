@@ -364,7 +364,7 @@
       "tags": ["mastery", "fitness", "pushup", "exercise"],
       "version": "1.0.0",
       "imageUrls": {
-        "icon": "https://raw.githubusercontent.com/kyuris8931/gamicraft-icons/main/push_up_icon.png"
+        "icon": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/habit/dumbell.png"
       },
       "linkedItem": {
         "id": "item_habit_push_up",
@@ -373,7 +373,7 @@
         "category": "MASTERY_TOOL",
         "value": 25,
         "imageUrls": {
-          "icon": "https://raw.githubusercontent.com/kyuris8931/gamicraft-icons/main/push_up_ticket_icon.png"
+          "icon": "https://raw.githubusercontent.com/kyuris8931/Ludic-Habit-RPG-Preset/refs/heads/main/assets/items/ticket.png"
         }
       }
     }
